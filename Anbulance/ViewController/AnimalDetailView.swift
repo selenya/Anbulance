@@ -28,7 +28,7 @@ struct AnimalDetailView: View {
                 .frame(width: 350.0, height: 250.0)
             Button(
                 action: {
-                    print("Delete annotation")
+                    print("Delete annotation in Firebase")
                 },
                 label: {
                     ZStack {
