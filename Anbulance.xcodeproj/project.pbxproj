@@ -1,0 +1,847 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		164B9DEE26353CCF002721DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 164B9DED26353CCF002721DD /* GoogleService-Info.plist */; };
+		16646B70261CDC2F008C970F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16646B6F261CDC2F008C970F /* MapView.swift */; };
+		16646B72262024BF008C970F /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16646B71262024BF008C970F /* MapModel.swift */; };
+		16646B742620364E008C970F /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16646B732620364E008C970F /* ReportView.swift */; };
+		16646B7626206034008C970F /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16646B7526206034008C970F /* TextView.swift */; };
+		166A2FD02621D93000441554 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166A2FCF2621D93000441554 /* ImagePicker.swift */; };
+		16C593CD264E5FC600CF7FB0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C593CC264E5FC600CF7FB0 /* LocationManager.swift */; };
+		16C593CF264F8A9900CF7FB0 /* AnnotationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C593CE264F8A9900CF7FB0 /* AnnotationModel.swift */; };
+		16C593D1264F965200CF7FB0 /* Shelters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C593D0264F965200CF7FB0 /* Shelters.swift */; };
+		16F167BB2619CA6E005F75CB /* AnbulanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F167BA2619CA6E005F75CB /* AnbulanceApp.swift */; };
+		16F167BD2619CA6E005F75CB /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F167BC2619CA6E005F75CB /* LaunchView.swift */; };
+		16F167BF2619CA6F005F75CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F167BE2619CA6F005F75CB /* Assets.xcassets */; };
+		16F167C22619CA6F005F75CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F167C12619CA6F005F75CB /* Preview Assets.xcassets */; };
+		16F167CD2619CA6F005F75CB /* AnbulanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F167CC2619CA6F005F75CB /* AnbulanceTests.swift */; };
+		16F167D82619CA6F005F75CB /* AnbulanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F167D72619CA6F005F75CB /* AnbulanceUITests.swift */; };
+		16F167E82619DF0D005F75CB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F167E72619DF0D005F75CB /* LoginView.swift */; };
+		16F167EA261A09C1005F75CB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F167E9261A09C1005F75CB /* SignUpView.swift */; };
+		16F32061265113FA002EBACE /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F32060265113FA002EBACE /* FirebaseService.swift */; };
+		16F3206326511547002EBACE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3206226511547002EBACE /* Post.swift */; };
+		28DF60B4715F7CD86687743C /* Pods_Anbulance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B43CF96DB56D6DB1CD9922 /* Pods_Anbulance.framework */; };
+		582D75906EB8AC06A338DA89 /* Pods_AnbulanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06034F5DF8413981CD2B5BFF /* Pods_AnbulanceTests.framework */; };
+		682D021229A5755E049AF0EB /* Pods_Anbulance_AnbulanceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9731E8EFD8AA22B98854F14 /* Pods_Anbulance_AnbulanceUITests.framework */; };
+		CD744FF126C29147005F4086 /* AnimalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD744FF026C29147005F4086 /* AnimalDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16F167C92619CA6F005F75CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16F167AF2619CA6E005F75CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16F167B62619CA6E005F75CB;
+			remoteInfo = Anbulance;
+		};
+		16F167D42619CA6F005F75CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16F167AF2619CA6E005F75CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16F167B62619CA6E005F75CB;
+			remoteInfo = Anbulance;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06034F5DF8413981CD2B5BFF /* Pods_AnbulanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnbulanceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		164B9DED26353CCF002721DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		16646B6F261CDC2F008C970F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		16646B71262024BF008C970F /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		16646B732620364E008C970F /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		16646B7526206034008C970F /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		166A2FCF2621D93000441554 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		16C593CC264E5FC600CF7FB0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		16C593CE264F8A9900CF7FB0 /* AnnotationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationModel.swift; sourceTree = "<group>"; };
+		16C593D0264F965200CF7FB0 /* Shelters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shelters.swift; sourceTree = "<group>"; };
+		16F167B72619CA6E005F75CB /* Anbulance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anbulance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F167BA2619CA6E005F75CB /* AnbulanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnbulanceApp.swift; sourceTree = "<group>"; };
+		16F167BC2619CA6E005F75CB /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		16F167BE2619CA6F005F75CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16F167C12619CA6F005F75CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		16F167C32619CA6F005F75CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F167C82619CA6F005F75CB /* AnbulanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnbulanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F167CC2619CA6F005F75CB /* AnbulanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnbulanceTests.swift; sourceTree = "<group>"; };
+		16F167CE2619CA6F005F75CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F167D32619CA6F005F75CB /* AnbulanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnbulanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F167D72619CA6F005F75CB /* AnbulanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnbulanceUITests.swift; sourceTree = "<group>"; };
+		16F167D92619CA6F005F75CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F167E72619DF0D005F75CB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		16F167E9261A09C1005F75CB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		16F32060265113FA002EBACE /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		16F3206226511547002EBACE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3E20446E8AB9343D34D45815 /* Pods-AnbulanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnbulanceTests.debug.xcconfig"; path = "Target Support Files/Pods-AnbulanceTests/Pods-AnbulanceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		57DC4D7D197B8E8E42F576BF /* Pods-Anbulance-AnbulanceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anbulance-AnbulanceUITests.release.xcconfig"; path = "Target Support Files/Pods-Anbulance-AnbulanceUITests/Pods-Anbulance-AnbulanceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A1B43CF96DB56D6DB1CD9922 /* Pods_Anbulance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anbulance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB4CE064E5F1D157A6108F35 /* Pods-Anbulance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anbulance.debug.xcconfig"; path = "Target Support Files/Pods-Anbulance/Pods-Anbulance.debug.xcconfig"; sourceTree = "<group>"; };
+		B27043C21A1B40CDCC9F9D8B /* Pods-Anbulance-AnbulanceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anbulance-AnbulanceUITests.debug.xcconfig"; path = "Target Support Files/Pods-Anbulance-AnbulanceUITests/Pods-Anbulance-AnbulanceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B9731E8EFD8AA22B98854F14 /* Pods_Anbulance_AnbulanceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anbulance_AnbulanceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD744FF026C29147005F4086 /* AnimalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailView.swift; sourceTree = "<group>"; };
+		E5631CD8C18F319E6C5511D0 /* Pods-AnbulanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnbulanceTests.release.xcconfig"; path = "Target Support Files/Pods-AnbulanceTests/Pods-AnbulanceTests.release.xcconfig"; sourceTree = "<group>"; };
+		F8506F32C9541BAB314361CE /* Pods-Anbulance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anbulance.release.xcconfig"; path = "Target Support Files/Pods-Anbulance/Pods-Anbulance.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16F167B42619CA6E005F75CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28DF60B4715F7CD86687743C /* Pods_Anbulance.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F167C52619CA6F005F75CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582D75906EB8AC06A338DA89 /* Pods_AnbulanceTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F167D02619CA6F005F75CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				682D021229A5755E049AF0EB /* Pods_Anbulance_AnbulanceUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16F167AE2619CA6E005F75CB = {
+			isa = PBXGroup;
+			children = (
+				16F167B92619CA6E005F75CB /* Anbulance */,
+				16F167CB2619CA6F005F75CB /* AnbulanceTests */,
+				16F167D62619CA6F005F75CB /* AnbulanceUITests */,
+				16F167B82619CA6E005F75CB /* Products */,
+				56F8542106A78971D7804706 /* Pods */,
+				5999B30D2CDF4ECCE0F721F3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		16F167B82619CA6E005F75CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16F167B72619CA6E005F75CB /* Anbulance.app */,
+				16F167C82619CA6F005F75CB /* AnbulanceTests.xctest */,
+				16F167D32619CA6F005F75CB /* AnbulanceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16F167B92619CA6E005F75CB /* Anbulance */ = {
+			isa = PBXGroup;
+			children = (
+				16F167E62619CD0E005F75CB /* Model */,
+				16F167E52619CD03005F75CB /* ViewController */,
+				16F167BA2619CA6E005F75CB /* AnbulanceApp.swift */,
+				16F167BE2619CA6F005F75CB /* Assets.xcassets */,
+				16F167C32619CA6F005F75CB /* Info.plist */,
+				164B9DED26353CCF002721DD /* GoogleService-Info.plist */,
+				16F167C02619CA6F005F75CB /* Preview Content */,
+			);
+			path = Anbulance;
+			sourceTree = "<group>";
+		};
+		16F167C02619CA6F005F75CB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				16F167C12619CA6F005F75CB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		16F167CB2619CA6F005F75CB /* AnbulanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				16F167CC2619CA6F005F75CB /* AnbulanceTests.swift */,
+				16F167CE2619CA6F005F75CB /* Info.plist */,
+			);
+			path = AnbulanceTests;
+			sourceTree = "<group>";
+		};
+		16F167D62619CA6F005F75CB /* AnbulanceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16F167D72619CA6F005F75CB /* AnbulanceUITests.swift */,
+				16F167D92619CA6F005F75CB /* Info.plist */,
+			);
+			path = AnbulanceUITests;
+			sourceTree = "<group>";
+		};
+		16F167E52619CD03005F75CB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				16F167BC2619CA6E005F75CB /* LaunchView.swift */,
+				16F167E72619DF0D005F75CB /* LoginView.swift */,
+				16F167E9261A09C1005F75CB /* SignUpView.swift */,
+				16646B6F261CDC2F008C970F /* MapView.swift */,
+				16646B732620364E008C970F /* ReportView.swift */,
+				CD744FF026C29147005F4086 /* AnimalDetailView.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		16F167E62619CD0E005F75CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16646B71262024BF008C970F /* MapModel.swift */,
+				16C593CE264F8A9900CF7FB0 /* AnnotationModel.swift */,
+				16C593D0264F965200CF7FB0 /* Shelters.swift */,
+				16646B7526206034008C970F /* TextView.swift */,
+				166A2FCF2621D93000441554 /* ImagePicker.swift */,
+				16C593CC264E5FC600CF7FB0 /* LocationManager.swift */,
+				16F32060265113FA002EBACE /* FirebaseService.swift */,
+				16F3206226511547002EBACE /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56F8542106A78971D7804706 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB4CE064E5F1D157A6108F35 /* Pods-Anbulance.debug.xcconfig */,
+				F8506F32C9541BAB314361CE /* Pods-Anbulance.release.xcconfig */,
+				B27043C21A1B40CDCC9F9D8B /* Pods-Anbulance-AnbulanceUITests.debug.xcconfig */,
+				57DC4D7D197B8E8E42F576BF /* Pods-Anbulance-AnbulanceUITests.release.xcconfig */,
+				3E20446E8AB9343D34D45815 /* Pods-AnbulanceTests.debug.xcconfig */,
+				E5631CD8C18F319E6C5511D0 /* Pods-AnbulanceTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5999B30D2CDF4ECCE0F721F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1B43CF96DB56D6DB1CD9922 /* Pods_Anbulance.framework */,
+				B9731E8EFD8AA22B98854F14 /* Pods_Anbulance_AnbulanceUITests.framework */,
+				06034F5DF8413981CD2B5BFF /* Pods_AnbulanceTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16F167B62619CA6E005F75CB /* Anbulance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16F167DC2619CA6F005F75CB /* Build configuration list for PBXNativeTarget "Anbulance" */;
+			buildPhases = (
+				13E45D2BFCCBF0D97DF2190E /* [CP] Check Pods Manifest.lock */,
+				16F167B32619CA6E005F75CB /* Sources */,
+				16F167B42619CA6E005F75CB /* Frameworks */,
+				16F167B52619CA6E005F75CB /* Resources */,
+				488896EAE6122B1EB6625767 /* [CP] Embed Pods Frameworks */,
+				8B9C43A865494FBE89AC027B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Anbulance;
+			productName = Anbulance;
+			productReference = 16F167B72619CA6E005F75CB /* Anbulance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16F167C72619CA6F005F75CB /* AnbulanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16F167DF2619CA6F005F75CB /* Build configuration list for PBXNativeTarget "AnbulanceTests" */;
+			buildPhases = (
+				8E6440D3EBD704A0733C63F3 /* [CP] Check Pods Manifest.lock */,
+				16F167C42619CA6F005F75CB /* Sources */,
+				16F167C52619CA6F005F75CB /* Frameworks */,
+				16F167C62619CA6F005F75CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16F167CA2619CA6F005F75CB /* PBXTargetDependency */,
+			);
+			name = AnbulanceTests;
+			productName = AnbulanceTests;
+			productReference = 16F167C82619CA6F005F75CB /* AnbulanceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16F167D22619CA6F005F75CB /* AnbulanceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16F167E22619CA6F005F75CB /* Build configuration list for PBXNativeTarget "AnbulanceUITests" */;
+			buildPhases = (
+				9774637178941E0CA67AEE6B /* [CP] Check Pods Manifest.lock */,
+				16F167CF2619CA6F005F75CB /* Sources */,
+				16F167D02619CA6F005F75CB /* Frameworks */,
+				16F167D12619CA6F005F75CB /* Resources */,
+				8FE1EA06A427568E669FE8D9 /* [CP] Embed Pods Frameworks */,
+				AF707C652265588E60B363EB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16F167D52619CA6F005F75CB /* PBXTargetDependency */,
+			);
+			name = AnbulanceUITests;
+			productName = AnbulanceUITests;
+			productReference = 16F167D32619CA6F005F75CB /* AnbulanceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16F167AF2619CA6E005F75CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					16F167B62619CA6E005F75CB = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					16F167C72619CA6F005F75CB = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 16F167B62619CA6E005F75CB;
+					};
+					16F167D22619CA6F005F75CB = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 16F167B62619CA6E005F75CB;
+					};
+				};
+			};
+			buildConfigurationList = 16F167B22619CA6E005F75CB /* Build configuration list for PBXProject "Anbulance" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16F167AE2619CA6E005F75CB;
+			productRefGroup = 16F167B82619CA6E005F75CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16F167B62619CA6E005F75CB /* Anbulance */,
+				16F167C72619CA6F005F75CB /* AnbulanceTests */,
+				16F167D22619CA6F005F75CB /* AnbulanceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16F167B52619CA6E005F75CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F167C22619CA6F005F75CB /* Preview Assets.xcassets in Resources */,
+				16F167BF2619CA6F005F75CB /* Assets.xcassets in Resources */,
+				164B9DEE26353CCF002721DD /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F167C62619CA6F005F75CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F167D12619CA6F005F75CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13E45D2BFCCBF0D97DF2190E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Anbulance-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		488896EAE6122B1EB6625767 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anbulance/Pods-Anbulance-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anbulance/Pods-Anbulance-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Anbulance/Pods-Anbulance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B9C43A865494FBE89AC027B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anbulance/Pods-Anbulance-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anbulance/Pods-Anbulance-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Anbulance/Pods-Anbulance-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E6440D3EBD704A0733C63F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnbulanceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FE1EA06A427568E669FE8D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anbulance-AnbulanceUITests/Pods-Anbulance-AnbulanceUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anbulance-AnbulanceUITests/Pods-Anbulance-AnbulanceUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Anbulance-AnbulanceUITests/Pods-Anbulance-AnbulanceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9774637178941E0CA67AEE6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Anbulance-AnbulanceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF707C652265588E60B363EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anbulance-AnbulanceUITests/Pods-Anbulance-AnbulanceUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anbulance-AnbulanceUITests/Pods-Anbulance-AnbulanceUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Anbulance-AnbulanceUITests/Pods-Anbulance-AnbulanceUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16F167B32619CA6E005F75CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C593CF264F8A9900CF7FB0 /* AnnotationModel.swift in Sources */,
+				16F167EA261A09C1005F75CB /* SignUpView.swift in Sources */,
+				16646B7626206034008C970F /* TextView.swift in Sources */,
+				16C593CD264E5FC600CF7FB0 /* LocationManager.swift in Sources */,
+				16F167E82619DF0D005F75CB /* LoginView.swift in Sources */,
+				16F3206326511547002EBACE /* Post.swift in Sources */,
+				166A2FD02621D93000441554 /* ImagePicker.swift in Sources */,
+				16646B70261CDC2F008C970F /* MapView.swift in Sources */,
+				16F32061265113FA002EBACE /* FirebaseService.swift in Sources */,
+				16F167BD2619CA6E005F75CB /* LaunchView.swift in Sources */,
+				16646B742620364E008C970F /* ReportView.swift in Sources */,
+				16646B72262024BF008C970F /* MapModel.swift in Sources */,
+				16F167BB2619CA6E005F75CB /* AnbulanceApp.swift in Sources */,
+				16C593D1264F965200CF7FB0 /* Shelters.swift in Sources */,
+				CD744FF126C29147005F4086 /* AnimalDetailView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F167C42619CA6F005F75CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F167CD2619CA6F005F75CB /* AnbulanceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F167CF2619CA6F005F75CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F167D82619CA6F005F75CB /* AnbulanceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16F167CA2619CA6F005F75CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16F167B62619CA6E005F75CB /* Anbulance */;
+			targetProxy = 16F167C92619CA6F005F75CB /* PBXContainerItemProxy */;
+		};
+		16F167D52619CA6F005F75CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16F167B62619CA6E005F75CB /* Anbulance */;
+			targetProxy = 16F167D42619CA6F005F75CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		16F167DA2619CA6F005F75CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16F167DB2619CA6F005F75CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16F167DD2619CA6F005F75CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB4CE064E5F1D157A6108F35 /* Pods-Anbulance.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Anbulance/Preview Content\"";
+				DEVELOPMENT_TEAM = 7NN4GA72T6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Anbulance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.selenyanar.Anbulance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		16F167DE2619CA6F005F75CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8506F32C9541BAB314361CE /* Pods-Anbulance.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Anbulance/Preview Content\"";
+				DEVELOPMENT_TEAM = 7NN4GA72T6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Anbulance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.selenyanar.Anbulance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		16F167E02619CA6F005F75CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E20446E8AB9343D34D45815 /* Pods-AnbulanceTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NN4GA72T6;
+				INFOPLIST_FILE = AnbulanceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.selenyanar.AnbulanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Anbulance.app/Anbulance";
+			};
+			name = Debug;
+		};
+		16F167E12619CA6F005F75CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5631CD8C18F319E6C5511D0 /* Pods-AnbulanceTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NN4GA72T6;
+				INFOPLIST_FILE = AnbulanceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.selenyanar.AnbulanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Anbulance.app/Anbulance";
+			};
+			name = Release;
+		};
+		16F167E32619CA6F005F75CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B27043C21A1B40CDCC9F9D8B /* Pods-Anbulance-AnbulanceUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NN4GA72T6;
+				INFOPLIST_FILE = AnbulanceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.selenyanar.AnbulanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Anbulance;
+			};
+			name = Debug;
+		};
+		16F167E42619CA6F005F75CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57DC4D7D197B8E8E42F576BF /* Pods-Anbulance-AnbulanceUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NN4GA72T6;
+				INFOPLIST_FILE = AnbulanceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.selenyanar.AnbulanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Anbulance;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16F167B22619CA6E005F75CB /* Build configuration list for PBXProject "Anbulance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F167DA2619CA6F005F75CB /* Debug */,
+				16F167DB2619CA6F005F75CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16F167DC2619CA6F005F75CB /* Build configuration list for PBXNativeTarget "Anbulance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F167DD2619CA6F005F75CB /* Debug */,
+				16F167DE2619CA6F005F75CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16F167DF2619CA6F005F75CB /* Build configuration list for PBXNativeTarget "AnbulanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F167E02619CA6F005F75CB /* Debug */,
+				16F167E12619CA6F005F75CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16F167E22619CA6F005F75CB /* Build configuration list for PBXNativeTarget "AnbulanceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F167E32619CA6F005F75CB /* Debug */,
+				16F167E42619CA6F005F75CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16F167AF2619CA6E005F75CB /* Project object */;
+}
