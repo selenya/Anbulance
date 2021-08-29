@@ -40,7 +40,11 @@ struct MapView: View {
             }).edgesIgnoringSafeArea(.all)
             
             .alert(isPresented: $showingAlert) {
-                Alert(title: Text(self.shelterAnnotation?.title ?? ""), message: Text("Use sheltorAnnotation to do whatever needed"), dismissButton: .default(Text("Got it!")))
+                Alert(title: Text(self.shelterAnnotation?.title ?? ""),
+                      message: Text("Use sheltorAnnotation to do whatever needed"),
+                      primaryButton: .default(Text("Barınağı ara"),
+                                              action: {callNumber(phoneNumber: "05325634203")}),
+                      secondaryButton: .cancel(Text("İptal")))
             }
 
             NavigationLink(
@@ -67,6 +71,23 @@ struct MapView: View {
                     NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
                     
                 }
+            }
+        }
+    }
+}
+
+private func callNumber(phoneNumber: String) {
+
+    if let phoneCallURL = URL(string: "telprompt://\(phoneNumber)") {
+
+        let application:UIApplication = UIApplication.shared
+        if (application.canOpenURL(phoneCallURL)) {
+            if #available(iOS 10.0, *) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            } else {
+                // Fallback on earlier versions
+                 application.openURL(phoneCallURL as URL)
+
             }
         }
     }
