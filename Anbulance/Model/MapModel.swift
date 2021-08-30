@@ -17,7 +17,7 @@ extension MapModel {
         new.onAnnotationTappedCallback = action
         return new
     }
-
+    
 }
 
 
@@ -56,12 +56,14 @@ struct MapModel: UIViewRepresentable {
                     let description = data["description"] as? String ?? ""
                     let imageUrl = data["imageUrl"] as? String ??
                         "https://via.placeholder.com/468x300?text=No%20image"
-
+                    
                     let latitude = data["latitude"] as? Double ?? 0
                     let longitude = data["longitude"] as? Double ?? 0
                     
                     let animalAnnotations = AnimalAnnotation(title: description,
-                                                             coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), imageUrl: imageUrl)
+                                                             coordinate: CLLocationCoordinate2D(latitude: latitude,
+                                                                                                longitude: longitude),
+                                                             imageUrl: imageUrl)
                     
                     return animalAnnotations
                     
@@ -76,13 +78,25 @@ struct MapModel: UIViewRepresentable {
     func makeCoordinator() -> MapViewCoordinator{
         MapViewCoordinator(self)
     }
-    
+   
+    func openMapForPlace(coordinates: CLLocationCoordinate2D) {
+        let regionDistance: CLLocationDistance = 10000000
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        
+        MKMapItem.openMaps(with: [mapItem], launchOptions: options)
+    }
     
 }
 
 class MapViewCoordinator: NSObject, MKMapViewDelegate {
     var mapModelController: MapModel
-
+    
     init(_ control: MapModel) {
         self.mapModelController = control
     }
@@ -146,7 +160,5 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate {
             }
         }
     }
-    
-    
     
 }

@@ -29,6 +29,7 @@ struct AnimalDetailView: View {
             Button(
                 action: {
                     print("Delete annotation in Firebase")
+                    MapModel().openMapForPlace(coordinates: animalAnnotation!.coordinate)
                 },
                 label: {
                     ZStack {
@@ -36,7 +37,7 @@ struct AnimalDetailView: View {
                             .frame(width: 350, height: 50, alignment: .center)
                             .foregroundColor(Color("AnbulanceBlue"))
                             .cornerRadius(8)
-                        Text("Kurtarıldı")
+                        Text("Kurtar")
                             .foregroundColor(.white)
                             .font(.system(size: 20))
                             .fontWeight(.bold)
