@@ -41,7 +41,7 @@ struct MapView: View {
             
             .alert(isPresented: $showingAlert) {
                 Alert(title: Text(self.shelterAnnotation?.title ?? ""),
-                      message: Text("Use sheltorAnnotation to do whatever needed"),
+                      message: Text("Veteriner veya barınağı arayarak yaralı hayvanın durumunu bildir."),
                       primaryButton: .default(Text("Barınağı ara"),
                                               action: {callNumber(phoneNumber: "05325634203")}),
                       secondaryButton: .cancel(Text("İptal")))

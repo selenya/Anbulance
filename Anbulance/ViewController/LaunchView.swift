@@ -77,6 +77,7 @@ struct LaunchView: View {
                 }
             }
         }
+        .foregroundColor(.white)
         
         if self.alert {
             

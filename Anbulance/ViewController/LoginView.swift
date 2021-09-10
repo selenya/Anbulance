@@ -85,12 +85,19 @@ struct LoginView: View {
                         action: {
                             self.verify()},
                         label: {
-                            RoundedRectangle(cornerRadius: 5)
-                                .frame(width: 300, height: 50, alignment: .center)
-                                .foregroundColor(Color("AnbulanceBlue"))
-                                .cornerRadius(8)
-                                .padding(.top, 100.0)
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 5)
+                                    .frame(width: 300, height: 50, alignment: .center)
+                                    .foregroundColor(Color("AnbulanceBlue"))
+                                    .cornerRadius(8)
+                                Text("Giriş yap")
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 18))
+                            }
+                            
                         })
+                        .padding(.top, 40.0)
                 }
                 
                 

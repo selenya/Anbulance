@@ -42,6 +42,22 @@ struct AnimalDetailView: View {
                             .fontWeight(.bold)
                     }
                 })
+            Button(
+                action: {
+                    print("kurtarıldı")
+                },
+                label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 5)
+                            .frame(width: 350, height: 50, alignment: .center)
+                            .foregroundColor(Color("AnbulanceGreen"))
+                            .cornerRadius(8)
+                        Text("Kurtarıldı")
+                            .foregroundColor(.white)
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                    }
+                })
         }
         
     }
