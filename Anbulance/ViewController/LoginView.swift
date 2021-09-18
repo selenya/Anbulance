@@ -10,6 +10,17 @@ import Firebase
 
 struct LoginView: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
+    var btnBack : some View {
+        Button(
+            action: {
+        self.presentationMode.wrappedValue.dismiss()
+    }) {
+        Text("< Geri")
+            .foregroundColor(Color("AnbulanceBlue"))
+        }}
+    
     @State var email = ""
     @State var parola = ""
     @State var visible = false
@@ -37,6 +48,7 @@ struct LoginView: View {
                             .frame(width: 300, height: 50, alignment: .center)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .cornerRadius(8)
+                            .foregroundColor(Color("AnbulanceBlue"))
                     }
                     HStack {
                         
@@ -54,6 +66,7 @@ struct LoginView: View {
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .frame(width: 300, height: 50, alignment: .center)
                                 .cornerRadius(8)
+                                .foregroundColor(Color("AnbulanceBlue"))
                             
                         } else {
                             SecureField("Parola", text: self.$parola)
@@ -61,6 +74,7 @@ struct LoginView: View {
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .frame(width: 300, height: 50, alignment: .center)
                                 .cornerRadius(8)
+                                .foregroundColor(Color("AnbulanceBlue"))
                             
                         }
                         
@@ -109,6 +123,8 @@ struct LoginView: View {
                 
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: btnBack)
     }
     
     func verify() {

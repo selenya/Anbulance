@@ -21,6 +21,17 @@ struct SignUpView: View {
     @State var error = ""
     @State var willMoveToNextScreen =  true
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
+    var btnBack : some View {
+        Button(
+            action: {
+        self.presentationMode.wrappedValue.dismiss()
+    }) {
+        Text("< Geri")
+            .foregroundColor(Color("AnbulanceBlue"))
+        }}
+    
     var body: some View {
         
         ZStack {
@@ -37,6 +48,7 @@ struct SignUpView: View {
                         .frame(width: 300, height: 50, alignment: .center)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .cornerRadius(8)
+                        .foregroundColor(Color("AnbulanceBlue"))
                 }.padding(.top, 10.0)
                 HStack {
                     Image(systemName: "person")
@@ -45,6 +57,7 @@ struct SignUpView: View {
                         .frame(width: 300, height: 50, alignment: .center)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .cornerRadius(8)
+                        .foregroundColor(Color("AnbulanceBlue"))
                 }
                 HStack {
                     Image(systemName: "envelope")
@@ -54,6 +67,7 @@ struct SignUpView: View {
                         .frame(width: 300, height: 50, alignment: .center)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .cornerRadius(8)
+                        .foregroundColor(Color("AnbulanceBlue"))
                 }
                 HStack {
                     Button(action: {
@@ -70,6 +84,7 @@ struct SignUpView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: 300, height: 50, alignment: .center)
                             .cornerRadius(8)
+                            .foregroundColor(Color("AnbulanceBlue"))
                         
                     } else {
                         SecureField("Parola oluştur", text: self.$parola)
@@ -77,6 +92,7 @@ struct SignUpView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: 300, height: 50, alignment: .center)
                             .cornerRadius(8)
+                            .foregroundColor(Color("AnbulanceBlue"))
                         
                     }
                     
@@ -103,6 +119,7 @@ struct SignUpView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: 300, height: 50, alignment: .center)
                             .cornerRadius(8)
+                            .foregroundColor(Color("AnbulanceBlue"))
                         
                     }
                 }.padding(.bottom, 130.0)
@@ -134,6 +151,8 @@ struct SignUpView: View {
                 
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: btnBack)
     }
     
     func register() {

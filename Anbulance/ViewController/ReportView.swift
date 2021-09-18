@@ -26,7 +26,16 @@ struct ReportView: View {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     
-    
+    var btnBack : some View {
+        Button(
+            action: {
+        self.presentationMode.wrappedValue.dismiss()
+    }) {
+        Text("< Geri")
+            .foregroundColor(Color("AnbulanceBlue"))
+        
+    }
+    }
     var body: some View {
         VStack {
             ZStack {
@@ -98,13 +107,14 @@ struct ReportView: View {
                     }
                 })
         }
-        
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: btnBack)
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
             ImagePicker(image: self.$inputImage)
         }
         
-        
     }
+    
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
