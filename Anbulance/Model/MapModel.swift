@@ -104,7 +104,7 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate {
     //EDIT THE ANNOTATION VIEWS HERE:
     func mapView(_ mapView: MKMapView, viewFor
                     annotation: MKAnnotation) -> MKAnnotationView?{
-        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customView")
+        var annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customView")
         
         //CUSTOM IMAGE ICON
         
@@ -116,8 +116,7 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate {
             annotationView.image = #imageLiteral(resourceName: "AnbulanceRedPin")
             annotationView.frame.size = CGSize(width: 50, height: 50)
         case is MKUserLocation:
-            annotationView.image = #imageLiteral(resourceName: "GreenCircle")
-            annotationView.frame.size = CGSize(width: 20, height: 20)
+            annotationView = MKUserLocationView.init()
         default:
             annotationView.image = #imageLiteral(resourceName: "AnbulancePin")
             annotationView.frame.size = CGSize(width: 50, height: 50)
@@ -143,7 +142,6 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate {
         
         //IF STATEMENT FOR WHAT KIND OF ACTIONSHEET/SCREEN IS GOIN TO BE DISPLAYED
     }
-    
     
     
     

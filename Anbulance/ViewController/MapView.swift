@@ -14,18 +14,19 @@ struct MapView: View {
     @ObservedObject private var locationManager = LocationManager()
     @State private var annotaionSelection: String? = nil
     @State private var showingAlert = false
-
+    
     @State private var animalAnnotation: AnimalAnnotation? = nil
     @State private var shelterAnnotation: ShelterAnnotation? = nil
-
+    
+    
     var body: some View {
         ZStack {
             
-
+            
             // NAVIGATION LINK FOR ANIMAL DETAIL VIEW
             NavigationLink(destination: AnimalDetailView(animalAnnotation: animalAnnotation), tag: "animal_detail_view_tag", selection: $annotaionSelection) { EmptyView()
             }
-
+            
             MapModel().onAnnotationTapped(perform: { annotation in
                 
                 // HERE YOU GET ANNOTATION TAPPED CALLBACKS
@@ -46,7 +47,8 @@ struct MapView: View {
                                               action: {callNumber(phoneNumber: "05325634203")}),
                       secondaryButton: .cancel(Text("İptal")))
             }
-
+            
+            
             NavigationLink(
                 destination: ReportView(),
                 label: {
@@ -74,20 +76,21 @@ struct MapView: View {
             }
         }
     }
+    
 }
 
 private func callNumber(phoneNumber: String) {
-
+    
     if let phoneCallURL = URL(string: "telprompt://\(phoneNumber)") {
-
+        
         let application:UIApplication = UIApplication.shared
         if (application.canOpenURL(phoneCallURL)) {
             if #available(iOS 10.0, *) {
                 application.open(phoneCallURL, options: [:], completionHandler: nil)
             } else {
                 // Fallback on earlier versions
-                 application.openURL(phoneCallURL as URL)
-
+                application.openURL(phoneCallURL as URL)
+                
             }
         }
     }
