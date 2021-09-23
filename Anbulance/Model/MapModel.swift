@@ -38,6 +38,9 @@ struct MapModel: UIViewRepresentable {
         map.userTrackingMode = .follow
         map.addAnnotation(yedikuleShelter)
         map.addAnnotation(kadikoy1)
+        map.addAnnotation(uskudar1)
+        map.addAnnotation(kadikoy2)
+        map.addAnnotation(bahcelievler1)
         
         
         func fetchData() {
@@ -124,7 +127,7 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate {
         
         return annotationView
     }
-    
+        
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let btn = UIButton(type: .detailDisclosure)
         view.canShowCallout = true

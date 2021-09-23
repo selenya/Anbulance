@@ -11,10 +11,13 @@ import MapKit
 class ShelterAnnotation: NSObject, MKAnnotation {
     let title: String?
     let coordinate: CLLocationCoordinate2D
+    let number: Int
     init(title: String?,
-         coordinate: CLLocationCoordinate2D) {
+         coordinate: CLLocationCoordinate2D,
+         number: Int) {
         self.title = title
         self.coordinate = coordinate
+        self.number = number
     }
 }
 

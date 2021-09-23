@@ -44,7 +44,7 @@ struct MapView: View {
                 Alert(title: Text(self.shelterAnnotation?.title ?? ""),
                       message: Text("Veteriner veya barınağı arayarak yaralı hayvanın durumunu bildir."),
                       primaryButton: .default(Text("Barınağı ara"),
-                                              action: {callNumber(phoneNumber: "05325634203")}),
+                                              action: {callNumber(phoneNumber: "\(self.shelterAnnotation?.number ?? 0)" )}),
                       secondaryButton: .cancel(Text("İptal")))
             }
             
@@ -74,10 +74,10 @@ struct MapView: View {
                     
                 }
             }
-        }
+        }.navigationBarHidden(false)
     }
-    
 }
+
 
 private func callNumber(phoneNumber: String) {
     

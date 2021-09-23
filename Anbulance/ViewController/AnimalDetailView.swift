@@ -91,6 +91,7 @@ struct AnimalDetailView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: btnBack)
     }
+
     
     
     struct ReportView_Previews: PreviewProvider {
