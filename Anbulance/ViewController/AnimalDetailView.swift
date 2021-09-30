@@ -58,6 +58,7 @@ struct AnimalDetailView: View {
             Button(
                 action: {
                     print("kurtarıldı")
+                    FirebaseService().deletePost(withID: animalAnnotation!.postID!)
                 },
                 label: {
                     ZStack {

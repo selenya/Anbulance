@@ -18,6 +18,7 @@ struct ReportView: View {
     let firebaseServices = FirebaseService()
     let latitude = CLLocationManager().location?.coordinate.latitude
     let longitude = CLLocationManager().location?.coordinate.longitude
+    var postID = "\(Int.random(in: 10000...10000000000))"
     @State var db = Firestore.firestore()
 
     
@@ -155,8 +156,8 @@ struct ReportView: View {
 
     // Create Firebase Document
     func addData(imageUrl : String) {
-        var ref: DocumentReference? = nil
-        ref = db.collection("posts").addDocument(data: [
+        db.collection("posts").document(postID).setData([
+            "postID": postID,
             "description": description,
             "latitude": latitude ?? 28.9,
             "longitude": longitude ?? 40.9 ,
@@ -165,10 +166,11 @@ struct ReportView: View {
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Document added with ID: \(ref!.documentID)")
+                print("Document added successfully.")
             }
         }
     }
+    
 
     struct ReportView_Previews: PreviewProvider {
         static var previews: some View {
@@ -176,3 +178,5 @@ struct ReportView: View {
         }
     }
 }
+
+

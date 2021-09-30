@@ -22,11 +22,14 @@ class ShelterAnnotation: NSObject, MKAnnotation {
 }
 
 class AnimalAnnotation: NSObject, MKAnnotation {
+    let postID: String?
     let title: String?
     let imageUrl: String?
     let coordinate: CLLocationCoordinate2D
-    init(title: String?,
+    init(postID: String?,
+         title: String?,
          coordinate: CLLocationCoordinate2D,imageUrl : String) {
+        self.postID = postID
         self.title = title
         self.coordinate = coordinate
         self.imageUrl = imageUrl

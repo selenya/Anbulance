@@ -55,6 +55,7 @@ struct MapModel: UIViewRepresentable {
                     
                     print(data.debugDescription)
                     
+                    let postID = data["postID"] as? String ?? ""
                     let title = data["title"] as? String ?? ""
                     let description = data["description"] as? String ?? ""
                     let imageUrl = data["imageUrl"] as? String ??
@@ -63,7 +64,8 @@ struct MapModel: UIViewRepresentable {
                     let latitude = data["latitude"] as? Double ?? 0
                     let longitude = data["longitude"] as? Double ?? 0
                     
-                    let animalAnnotations = AnimalAnnotation(title: description,
+                    let animalAnnotations = AnimalAnnotation(postID: postID,
+                                                             title: description,
                                                              coordinate: CLLocationCoordinate2D(latitude: latitude,
                                                                                                 longitude: longitude),
                                                              imageUrl: imageUrl)

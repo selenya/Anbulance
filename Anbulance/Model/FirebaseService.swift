@@ -25,13 +25,14 @@ class FirebaseService: ObservableObject {
             var posts = documents.map { (queryDocumentSnapshot) -> MKAnnotation in
                 let data = queryDocumentSnapshot.data()
                 
+                let postID = data["postID"] as? String ?? ""
                 let title = data["title"] as? String ?? ""
                 let description = data["description"] as? String ?? ""
                 let imageUrl = data["imageUrl"] as? String ?? ""
                 let latitude = data["latitude"] as? Double ?? 0
                 let longitude = data["longitude"] as? Double ?? 0
                 
-                let animalAnnotations = AnimalAnnotation(title: title, coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), imageUrl: imageUrl)
+                let animalAnnotations = AnimalAnnotation(postID: postID, title: title, coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), imageUrl: imageUrl)
                 
                 print(animalAnnotations)
                 
@@ -44,8 +45,15 @@ class FirebaseService: ObservableObject {
         }
     }
     
-  
- 
+    func deletePost(withID: String) {
+        db.collection("posts").document(withID).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+    }
     
   
 }
