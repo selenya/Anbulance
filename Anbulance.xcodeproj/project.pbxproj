@@ -180,10 +180,10 @@
 		16F167E52619CD03005F75CB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				16646B6F261CDC2F008C970F /* MapView.swift */,
 				16F167BC2619CA6E005F75CB /* LaunchView.swift */,
 				16F167E72619DF0D005F75CB /* LoginView.swift */,
 				16F167E9261A09C1005F75CB /* SignUpView.swift */,
-				16646B6F261CDC2F008C970F /* MapView.swift */,
 				16646B732620364E008C970F /* ReportView.swift */,
 				CD744FF026C29147005F4086 /* AnimalDetailView.swift */,
 			);

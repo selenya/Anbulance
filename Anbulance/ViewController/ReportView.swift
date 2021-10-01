@@ -62,10 +62,11 @@ struct ReportView: View {
                 // Select Image
                 self.showingImagePicker = true
             }
-            TextField("  Detaylı açıklama gir.", text: $description)
+            TextEditor(text: $description)
                 .frame(width: 300, height: 200, alignment: .center)
                 .cornerRadius(8)
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue, lineWidth: 1))
+                .foregroundColor(Color("AnbulanceBlue")) 
             Button(
                 action: {
                     print("Yayınla")

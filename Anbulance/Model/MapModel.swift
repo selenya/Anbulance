@@ -85,7 +85,7 @@ struct MapModel: UIViewRepresentable {
     }
    
     func openMapForPlace(coordinates: CLLocationCoordinate2D) {
-        let regionDistance: CLLocationDistance = 10000000
+        let regionDistance: CLLocationDistance = 1000000
         let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
         let options = [
             MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
@@ -155,7 +155,7 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate {
         if let annotationView = views.first {
             if let annotation = annotationView.annotation {
                 if annotation is MKUserLocation {
-                    let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 7000, longitudinalMeters: 7000)
+                    let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 700, longitudinalMeters: 700)
                     mapView.setRegion(region, animated: true)
                     
                     

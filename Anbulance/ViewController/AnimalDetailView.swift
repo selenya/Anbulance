@@ -42,6 +42,7 @@ struct AnimalDetailView: View {
             
             Text(animalAnnotation?.title ?? "")
                 .frame(width: 350.0, height: 250.0)
+                .foregroundColor(Color("AnbulanceBlue"))
             Button(
                 action: {
                     MapModel().openMapForPlace(coordinates: animalAnnotation!.coordinate)
@@ -82,24 +83,9 @@ struct AnimalDetailView: View {
                                         primaryButton: .cancel(Text("İptal")),
                                         secondaryButton: .destructive(
                                             Text("Evet"),
-                                            action: {FirebaseService().deletePost(withID: animalAnnotation!.postID!)}
+                                            action: {FirebaseService().deletePost(withID: animalAnnotation!.postID!); presentationMode.wrappedValue.dismiss()
+                                            }
                                         ))
-                })
-            Button(
-                action: {
-                    print("raporlar")
-                },
-                label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 5)
-                            .frame(width: 350, height: 50, alignment: .center)
-                            .foregroundColor(.gray)
-                            .cornerRadius(8)
-                        Text("Bu paylaşımı bildir")
-                            .foregroundColor(.white)
-                            .font(.system(size: 20))
-                            .fontWeight(.bold)
-                    }
                 })
         }
         .navigationBarBackButtonHidden(true)
