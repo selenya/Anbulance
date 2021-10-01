@@ -13,6 +13,9 @@ import SDWebImageSwiftUI
 struct AnimalDetailView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var showAlert = false
+    
+    
     
     var btnBack : some View {
         Button(
@@ -57,8 +60,8 @@ struct AnimalDetailView: View {
                 })
             Button(
                 action: {
-                    print("kurtarıldı")
-                    FirebaseService().deletePost(withID: animalAnnotation!.postID!)
+                    print("Kurtarıldı")
+                    showAlert = true
                 },
                 label: {
                     ZStack {
@@ -71,6 +74,16 @@ struct AnimalDetailView: View {
                             .font(.system(size: 20))
                             .fontWeight(.bold)
                     }
+                }).alert(isPresented: $showAlert,
+                         content: {
+                            Alert(
+                                        title: Text("Yaralı hayvan kurtarıldı mı?"),
+                                        message: Text("Evet'i seçersen bu gönderi haritadan silinecek. Bu işlem geri alınamaz."),
+                                        primaryButton: .cancel(Text("İptal")),
+                                        secondaryButton: .destructive(
+                                            Text("Evet"),
+                                            action: {FirebaseService().deletePost(withID: animalAnnotation!.postID!)}
+                                        ))
                 })
             Button(
                 action: {
