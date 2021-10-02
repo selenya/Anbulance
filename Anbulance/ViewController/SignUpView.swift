@@ -20,18 +20,19 @@ struct SignUpView: View {
     @State var alert = false
     @State var error = ""
     @State var willMoveToNextScreen =  true
-    @State var checkBox = CheckBoxItem(title: "Kullanıcı şartlarını okudum ve kabul ediyorum.", checked: false)
+    @State var checkBox = CheckBoxItem(title: "Kullanıcı Şartlarını okudum ve kabul ediyorum.", checked: false)
+    @State var showTerms = false
     
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
+    
     var btnBack : some View {
         Button(
             action: {
-        self.presentationMode.wrappedValue.dismiss()
-    }) {
-        Text("< Geri")
-            .foregroundColor(Color("AnbulanceBlue"))
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+            Text("< Geri")
+                .foregroundColor(Color("AnbulanceBlue"))
         }}
     
     var body: some View {
@@ -114,6 +115,7 @@ struct SignUpView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: 300, height: 50, alignment: .center)
                             .cornerRadius(8)
+                            .foregroundColor(Color("AnbulanceBlue"))
                         
                     } else {
                         SecureField("Parolayı yeniden gir", text: self.$reparola)
@@ -137,21 +139,32 @@ struct SignUpView: View {
                         if checkBox.checked {
                             
                             Image(systemName: "checkmark.circle.fill")
-                            .font(.system(size: 20))
+                                .font(.system(size: 20))
                                 .foregroundColor(Color("AnbulanceBlue"))
                             
                         }
-                        
                     }
                     .onTapGesture(perform: {
                         checkBox.checked.toggle()
                     })
                     
-                    Text(checkBox.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("AnbulanceBlue"))
-                        .frame(width: 300, height: 50, alignment: .center)
-    
+                    HStack {
+                        Button(action: {
+                            //NAVIGATE TO TERMS AND CONDITIONS
+                            self.showTerms.toggle()
+                            
+                            
+                        }, label: {
+                            Text(checkBox.title)
+                                .fontWeight(.medium)
+                                .underline()
+                                .foregroundColor(Color("AnbulanceBlue"))
+                                .frame(width: 300, height: 50, alignment: .center)
+                        }).sheet(isPresented: $showTerms) {
+                            TermsConditionsView()
+                        }
+                    }
+                    
                 }.padding(.bottom, 30)
                 
                 NavigationLink(
@@ -169,7 +182,7 @@ struct SignUpView: View {
                         }
                         .simultaneousGesture(TapGesture().onEnded{
                             self.register()
-                                        })
+                        })
                         .padding(.bottom, 20)
                     })
                 
@@ -188,41 +201,41 @@ struct SignUpView: View {
     func register() {
         
         if self.checkBox.checked {
-        if self.email != "" {
-            
-            if self.parola == self.reparola {
+            if self.email != "" {
                 
-                Auth.auth().createUser(withEmail: self.email, password: self.parola) { (ress, err) in
+                if self.parola == self.reparola {
                     
-                    if err != nil {
+                    Auth.auth().createUser(withEmail: self.email, password: self.parola) { (ress, err) in
                         
-                        self.error = err!.localizedDescription
-                        self.alert.toggle()
+                        if err != nil {
+                            
+                            self.error = err!.localizedDescription
+                            self.alert.toggle()
+                            
+                            return
+                            
+                        }
                         
-                        return
+                        print("success")
+                        
+                        UserDefaults.standard.set(true, forKey: "status")
+                        NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
                         
                     }
                     
-                    print("success")
                     
-                    UserDefaults.standard.set(true, forKey: "status")
-                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                } else {
+                    
+                    self.error = "Parolalar eşleşmiyor"
+                    self.alert.toggle()
                     
                 }
+            }} else {
                 
-                
-            } else {
-                
-                self.error = "Parolalar eşleşmiyor"
+                self.error = "Lütfen bütün alanları doldurun"
                 self.alert.toggle()
                 
             }
-        }} else {
-            
-            self.error = "Lütfen bütün alanları doldurun"
-            self.alert.toggle()
-            
-        }
     }
     
     
@@ -230,7 +243,7 @@ struct SignUpView: View {
         var id = UUID().uuidString
         var title: String
         var checked: Bool
-
+        
     }
     
 }
