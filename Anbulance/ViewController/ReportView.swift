@@ -70,8 +70,6 @@ struct ReportView: View {
             Button(
                 action: {
                     print("Yayınla")
-                    print("\(latitude)")
-                    print("\(longitude)")
                     //createPost()
                     uploadImageAndAddData()
                     firebaseServices.fetchData()

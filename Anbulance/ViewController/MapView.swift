@@ -61,7 +61,7 @@ struct MapView: View {
                             .font(.system(size: 20))
                             .fontWeight(.bold)
                     }
-                }).offset(y: 300)
+                }).offset(y: 260)
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {

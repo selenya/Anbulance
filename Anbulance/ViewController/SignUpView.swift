@@ -20,6 +20,8 @@ struct SignUpView: View {
     @State var alert = false
     @State var error = ""
     @State var willMoveToNextScreen =  true
+    @State var checkBox = CheckBoxItem(title: "Kullanıcı şartlarını okudum ve kabul ediyorum.", checked: false)
+    
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
@@ -122,7 +124,35 @@ struct SignUpView: View {
                             .foregroundColor(Color("AnbulanceBlue"))
                         
                     }
-                }.padding(.bottom, 130.0)
+                }
+                
+                HStack {
+                    ZStack {
+                        
+                        Circle()
+                            .stroke(checkBox.checked ? Color("AnbulanceBlue") :
+                                        Color.gray, lineWidth: 1)
+                            .frame(width: 20, height: 20)
+                        
+                        if checkBox.checked {
+                            
+                            Image(systemName: "checkmark.circle.fill")
+                            .font(.system(size: 20))
+                                .foregroundColor(Color("AnbulanceBlue"))
+                            
+                        }
+                        
+                    }
+                    .onTapGesture(perform: {
+                        checkBox.checked.toggle()
+                    })
+                    
+                    Text(checkBox.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("AnbulanceBlue"))
+                        .frame(width: 300, height: 50, alignment: .center)
+    
+                }.padding(.bottom, 30)
                 
                 NavigationLink(
                     destination: MapView(),
@@ -157,6 +187,7 @@ struct SignUpView: View {
     
     func register() {
         
+        if self.checkBox.checked {
         if self.email != "" {
             
             if self.parola == self.reparola {
@@ -186,13 +217,22 @@ struct SignUpView: View {
                 self.alert.toggle()
                 
             }
-        } else {
+        }} else {
             
             self.error = "Lütfen bütün alanları doldurun"
             self.alert.toggle()
             
         }
     }
+    
+    
+    struct CheckBoxItem: Identifiable {
+        var id = UUID().uuidString
+        var title: String
+        var checked: Bool
+
+    }
+    
 }
 
 struct SignUpView_Previews: PreviewProvider {
