@@ -17,6 +17,7 @@ struct MapView: View {
     
     @State private var animalAnnotation: AnimalAnnotation? = nil
     @State private var shelterAnnotation: ShelterAnnotation? = nil
+    @State var showReportView = false
     
     
     var body: some View {
@@ -48,20 +49,24 @@ struct MapView: View {
                       secondaryButton: .cancel(Text("İptal")))
             }
             
-            
-            NavigationLink(
-                destination: ReportView(),
-                label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 5)
-                            .frame(width: 300, height: 60, alignment: .center)
-                            .foregroundColor(Color("AnbulanceBlue"))
-                        Text("YARALI HAYVAN BİLDİR")
-                            .foregroundColor(.white)
-                            .font(.system(size: 20))
-                            .fontWeight(.bold)
-                    }
-                }).offset(y: 260)
+            Button(action: {
+                showReportView.toggle()
+            },
+            label: {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 5)
+                        .frame(width: 300, height: 60, alignment: .center)
+                        .foregroundColor(Color("AnbulanceBlue"))
+                    Text("YARALI HAYVAN BİLDİR")
+                        .foregroundColor(.white)
+                        .font(.system(size: 20))
+                        .fontWeight(.bold)
+                }
+            }).offset(y: 260)
+            .sheet(isPresented: $showReportView,
+                   content: {
+                    ReportView()
+                   })
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
