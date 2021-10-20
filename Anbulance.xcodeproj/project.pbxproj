@@ -52,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		06034F5DF8413981CD2B5BFF /* Pods_AnbulanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnbulanceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		162E02D7272050760053C89B /* Anbulance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Anbulance.entitlements; sourceTree = "<group>"; };
 		164B9DED26353CCF002721DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		16646B6F261CDC2F008C970F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		16646B71262024BF008C970F /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		16F167B92619CA6E005F75CB /* Anbulance */ = {
 			isa = PBXGroup;
 			children = (
+				162E02D7272050760053C89B /* Anbulance.entitlements */,
 				16F167E62619CD0E005F75CB /* Model */,
 				16F167E52619CD03005F75CB /* ViewController */,
 				16F167BA2619CA6E005F75CB /* AnbulanceApp.swift */,
@@ -678,6 +680,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Anbulance/Anbulance.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Anbulance/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NN4GA72T6;
@@ -702,6 +705,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Anbulance/Anbulance.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Anbulance/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NN4GA72T6;
