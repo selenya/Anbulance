@@ -26,6 +26,7 @@ struct ReportView: View {
     @State private var image: Image?
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
+    @State private var textIsFilled = false
     
     var btnBack : some View {
         Button(
@@ -69,11 +70,19 @@ struct ReportView: View {
                 .foregroundColor(Color("AnbulanceBlue")) 
             Button(
                 action: {
-                    print("Yayınla")
-                    //createPost()
-                    uploadImageAndAddData()
-                    firebaseServices.fetchData()
-                    presentationMode.wrappedValue.dismiss()
+                    
+                    if description == "" {
+                        
+                        textIsFilled.toggle()
+                        
+                    } else {
+                        print("Yayınla")
+                        //createPost()
+                        uploadImageAndAddData()
+                        firebaseServices.fetchData()
+                        presentationMode.wrappedValue.dismiss()
+                        
+                    }
                 },
                 label: {
                     ZStack {
@@ -86,6 +95,11 @@ struct ReportView: View {
                             .font(.system(size: 20))
                             .fontWeight(.bold)
                     }.padding(.top, 40.0)
+                })
+                .alert(isPresented: $textIsFilled, content: {
+                    Alert(title: Text("Eksik bilgi"),
+                          message: Text("Lütfen tüm alanları doldurun"),
+                          dismissButton: .default(Text("Tamam")))
                 })
             
             Button(

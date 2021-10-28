@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Firebase
+import FirebaseMessaging
+
 
 @main
 struct AnbulanceApp: App {

@@ -229,6 +229,9 @@ PODS:
   - Firebase/Firestore (7.11.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 7.11.0)
+  - Firebase/Messaging (7.11.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 7.11.0)
   - Firebase/Storage (7.11.0):
     - Firebase/CoreOnly
     - FirebaseStorage (~> 7.11.0)
@@ -290,6 +293,19 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/UserDefaults (~> 7.0)
     - PromisesObjC (~> 1.2)
+  - FirebaseInstanceID (7.11.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
+  - FirebaseMessaging (7.11.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - FirebaseInstanceID (~> 7.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/Reachability (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
   - FirebaseStorage (7.11.0):
     - FirebaseCore (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.4)
@@ -366,6 +382,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
+  - Firebase/Messaging
   - Firebase/Storage
   - FirebaseUI/Auth
   - SDWebImageSwiftUI
@@ -381,6 +398,8 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseFirestore
     - FirebaseInstallations
+    - FirebaseInstanceID
+    - FirebaseMessaging
     - FirebaseStorage
     - FirebaseUI
     - GoogleAppMeasurement
@@ -405,6 +424,8 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 68ad972f99206cef818230f3f3179d52ccfb7f8c
   FirebaseFirestore: f495bb336b23eca23ea5d3605dce2a4cc214fde9
   FirebaseInstallations: a58d4f72ec5861840b84df489f2668d970df558a
+  FirebaseInstanceID: ad5135045a498d7775903efd39762d2cdfa1be27
+  FirebaseMessaging: 163435fb6db065e3b6228f1e577b10ed2cc506d2
   FirebaseStorage: 8542711850ca181a3931c0ed483006a7b46039e7
   FirebaseUI: 59db3d833773f985550897d54ceb811ba37fb9a5
   GoogleAppMeasurement: fd19169c3034975cb934e865e5667bfdce59df7f
@@ -419,6 +440,6 @@ SPEC CHECKSUMS:
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
 
-PODFILE CHECKSUM: 950da72d0dfd6a4fb7b8ac7a960bd45a06eb59d4
+PODFILE CHECKSUM: ebf93d2b774f819949e9f935d9a322d4fe72e9c3
 
 COCOAPODS: 1.10.1

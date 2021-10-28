@@ -22,4 +22,5 @@ target 'Anbulance' do
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
   pod 'SDWebImageSwiftUI'
+  pod 'Firebase/Messaging'
 end
