@@ -5,3 +5,16 @@ Anbulance allows users to discover and share wounded animals. Wounded animals, s
 
 
 ![Black_Mockup 001](https://user-images.githubusercontent.com/65967007/137961554-b1430fd9-0083-4c9e-bc35-7b2c016ea036.jpeg)
+
+## Features
+
+- User authorization
+- Upload photos
+- Track & save location
+- Navigation
+
+## Stacks Used
+
+- SwiftUI
+- Mapkit
+- Firebase
